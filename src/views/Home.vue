@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+
+<div style="height: 100%; width: 100%; background-color:#e2e2e2">
+  <v-layout  align-start wrap>
+    <v-flex xs12 sm3 v-for="n in 5" :key="n" style="padding:10px">
+      <v-card
+      style="height: 200px; width: 100%;">
+        test
+      </v-card>
+    </v-flex>
+    <v-flex xs12 sm3 style="padding:10px">
+      <v-card
+      style="height: 200px; width: 100%;" to="edit">
+        last item
+      </v-card>
+    </v-flex>
+  </v-layout>
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import { mapState, mapMutations } from "vuex";
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
   }
 }
 </script>
